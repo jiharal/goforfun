@@ -22,7 +22,7 @@ func main() {
 	go Notify()
 	r := mux.NewRouter()
 	r.HandleFunc("/notifications", Notification)
-	log.Fatal(http.ListenAndServe(":8000", r))
+	log.Fatal(http.ListenAndServe(":8090", r))
 }
 
 func CreateTimer(countdownValue int, msg string) {
